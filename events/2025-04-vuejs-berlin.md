@@ -14,20 +14,29 @@ Slots are open!
 
 <details>
   <summary>
-    Zahra Mosayebi
+    <span style="text-decoration: line-through;">Zahra Mosayebi</span>
     <span title="Talk">🎙</span>
-    <strong>Performance Optimizations in Vuejs</strong>
+    <strong style="text-decoration: line-through;">Performance Optimizations in Vuejs</strong>
   </summary>
-  <p></p>
+  <p>Unfortunately, Zahra had to cancel her talk.</p>
+</details>
+
+<details>
+  <summary>
+    Frank
+    <span title="Talk">🎙</span>
+    <strong>Vuejs Setup Show and Tell</strong>
+  </summary>
+  <p>Worst Practice Show & Tell' about their Vue.js Setup, Monorepo, Nuxt, Nuxt Content, Symfony API backend, the struggles and also the nice bits.</p>
 </details>
 
 <details>
   <summary>
     All of us
     <span title="Topic">🗫</span>
-    <strong>Lets talk about what happened at Vuejs Amsterdam!</strong>
+    <strong>Performance Optimizations in Vuejs</strong>
   </summary>
-  <p>Lets share Vuejs conference experiences and news!</p>
+  <p>Lets share our knowledge about performance optimizations in Vuejs!</p>
 </details>
 
 <!--details>
