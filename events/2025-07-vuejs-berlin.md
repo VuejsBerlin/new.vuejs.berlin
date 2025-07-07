@@ -12,14 +12,14 @@ Let's talk about Vue.js the Vue.js ecosystem!
 
 Slots are open!
 
-<!--details>
+<details>
   <summary>
-    Someone
+    Divyank
     <span title="Talk">🎙</span>
-    <strong>Talks</strong>
+    <strong>App Development surprise talk</strong>
   </summary>
-  <p>About things.</p>
-</details-->
+  <p>Divyank wants to talk about the app they're currently developing!</p>
+</details>
 
 ---
 
