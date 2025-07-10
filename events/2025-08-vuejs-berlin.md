@@ -31,7 +31,11 @@ Stickers! We also will have Coffee, Mate, Water …and maybe Beer!
 
 We follow the Berlin Code Of Conduct and expect every attendee to do the same. More details can be found on [berlincodeofconduct.org](http://berlincodeofconduct.org).
 
-## Our Host: Wikimedia e.V. 📚
+## Our Host: YPOG GmbH
 
-Wikimedia Deutschland e.V. is kindly offering their event space, time and resources, to make our Meetup possible.
+YPOG GmbH is kindly offering their event space, time and resources, to make our Meetup possible.
+
+Address: Kurfüstendamm 12, 10719 Berlin
+
+Ring the YPOG doorbell to get in, then take the right elevator.
 
