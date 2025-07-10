@@ -31,13 +31,21 @@ import NextEvent from './NextEvent.vue'
 Our meetup is kindly hosted by Wikimedia!<br/>
 The address is:
 <address>
+  <a href="https://www.openstreetmap.org/node/3678881038">
+    YPOG GmbH<br/>
+    Kurfürstendamm 12<br/>
+    <br/>
+    10719 Berlin<br/>
+  </a>
+</address>
+<!--address>
   <a href="https://www.openstreetmap.org/node/2551527703">
     Wikimedia Deutschland e.V.<br/>
     Tempelhofer Ufer 23-24<br/>
     <br/>
     10963 Berlin<br/>
   </a>
-</address>
+</address-->
 
 ## Event Page
 
