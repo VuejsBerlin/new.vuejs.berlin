@@ -1,5 +1,5 @@
 ---
-title: Vue.js // Berlin #100!
+title: "Vue.js // Berlin #100!"
 date: 2025-08-12T19:00:00+02:00
 slug: 2025-08-12-vuejs-berlin
 hero: https://images.lumacdn.com/cdn-cgi/image/format=auto,quality=81,width=640/event-covers/06/4d793884-19fc-4f33-9ee8-82a1e2626da7
