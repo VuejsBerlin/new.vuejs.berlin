@@ -28,16 +28,18 @@ import NextEvent from './NextEvent.vue'
 
 ## The Venue
 
-Our meetup is kindly hosted by Wikimedia!<br/>
-The address is:
-<address>
-  <a href="https://www.openstreetmap.org/node/3678881038">
-    YPOG GmbH<br/>
-    Kurfürstendamm 12<br/>
-    <br/>
-    10719 Berlin<br/>
-  </a>
-</address>
+Our meetup is kindly hosted by YPOG!<br/>
+
+<div style="display: flex; align-items: center;">
+  <img src="./ypog.webp" alt="YPOG company logo" />
+  <address>
+    <a href="https://www.openstreetmap.org/node/3678881038">
+      YPOG GmbH<br/>
+      Kurfürstendamm 12<br/>
+      10719 Berlin<br/>
+    </a>
+  </address>
+</div>
 <!--address>
   <a href="https://www.openstreetmap.org/node/2551527703">
     Wikimedia Deutschland e.V.<br/>

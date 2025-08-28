@@ -1,10 +1,10 @@
 ---
-title: Vue.js // Berlin
+title: "Vue.js // Berlin #101"
 date: 2025-09-09T19:00:00+02:00
 slug: 2025-09-09-vuejs-berlin
 hero: https://images.lumacdn.com/cdn-cgi/image/format=auto,quality=81,width=640/event-covers/06/4d793884-19fc-4f33-9ee8-82a1e2626da7
 hero_alt: People sitting in a barely lit room with laptops, in front of a large window showing a skyline and The Matrix like sky.
-luma_url: https://lu.ma/vuejs_berlin
+luma_url: https://luma.com/gv3a38ht
 ---
 Let's talk about Vue.js the Vue.js ecosystem!
 
@@ -31,7 +31,10 @@ Stickers! We also will have Coffee, Mate, Water …and maybe Beer!
 
 We follow the Berlin Code Of Conduct and expect every attendee to do the same. More details can be found on [berlincodeofconduct.org](http://berlincodeofconduct.org).
 
-## Our Host: Wikimedia e.V. 📚
+## Our Host: YPOG GmbH
 
-Wikimedia Deutschland e.V. is kindly offering their event space, time and resources, to make our Meetup possible.
+YPOG GmbH is kindly offering their event space, time and resources, to make our Meetup possible.
 
+Address: Kurfüstendamm 12, 10719 Berlin
+
+Ring the YPOG doorbell (bottom right) to get in, then take the right(!) elevator.
