@@ -1,12 +1,12 @@
 ---
-title: "Vue.js // Berlin #101"
+title: "Vue.js // Berlin #101 -- Vite Edition"
 date: 2025-09-09T19:00:00+02:00
 slug: 2025-09-09-vuejs-berlin
 hero: https://images.lumacdn.com/cdn-cgi/image/format=auto,quality=81,width=640/event-covers/06/4d793884-19fc-4f33-9ee8-82a1e2626da7
 hero_alt: People sitting in a barely lit room with laptops, in front of a large window showing a skyline and The Matrix like sky.
 luma_url: https://luma.com/gv3a38ht
 ---
-Let's talk about Vue.js the Vue.js ecosystem!
+Let's talk about Vue.js the Vue.js ecosystem and get the chance to win a free ticket to the first ViteConf!
 
 ## Presentation 📽️
 
@@ -25,7 +25,26 @@ Slots are open!
 
 ## Swag'n'Goodies 😎
 
-Stickers! We also will have Coffee, Mate, Water …and maybe Beer!
+Drinks and snacks, and **one free ticket to ViteConf 2025**!
+
+## ViteConf Raffle
+
+We will raffle the ticket in the middle of the meetup. Every interested attendee gets one slot on the wheel of fortune.
+
+On the first in-person ViteConf you can expect...
+
+ * 🔥 500 JavaScript nerds joining in Amsterdam
+ * 👀 25+ In-depth Sessions & Real-World Case Studies
+ * 🙌🏻 Everyone is using Vite! It is the shared infra of the web
+ * 📹 Official Vite Documentary Premiere
+ * 🧠 Learn from industry experts and leaders
+ * 🎤 Ask your questions live during two panels
+ * 🤩 Top-notch speakers such as:
+    * 👤 **Evan You**, the creator of Vue and Vite
+    * 👤 **Rich Harris**, the creator of Svelte
+    * 👤 **Tanner Linsley**, owner at TanStack
+    * 👤 **Mathias Biilmann**, CEO and co-founder of Netlify
+    * ...and many more!
 
 ## Code of Conduct 🫶
 
