@@ -10,7 +10,16 @@ Let's talk about Vue.js the Vue.js ecosystem and get the chance to win a free ti
 
 ## Presentation 📽️
 
-Slots are open!
+<details>
+  <summary>
+    Fuzzyma
+    <span title="Talk">🎙</span>
+    <strong>Vite Plugins</strong>
+  </summary>
+  <p>An introduction into Vite plugins and maybe a showcase of one he wrote.</p>
+</details>
+
+Interested in giving a talk? We have one slot left!
 
 <!--details>
   <summary>
