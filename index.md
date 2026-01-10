@@ -28,6 +28,9 @@ import NextEvent from './NextEvent.vue'
 
 ## The Venue
 
+tba
+
+<!--
 Our meetup is kindly hosted by YPOG!<br/>
 
 <div style="display: flex; align-items: center;">
