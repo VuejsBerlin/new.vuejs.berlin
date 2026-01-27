@@ -13,6 +13,7 @@ import NextEvent from './NextEvent.vue'
   </summary>
   <br />
   <iframe
+    loading="lazy"
     src="https://lu.ma/embed/calendar/cal-YB4E1NxlHNwOoYG/events?lt=light"
     width="640"
     height="440"
@@ -28,29 +29,20 @@ import NextEvent from './NextEvent.vue'
 
 ## The Venue
 
-tba
-
-<!--
-Our meetup is kindly hosted by YPOG!<br/>
+Our meetup is kindly hosted by Wikimedia!<br/>
 
 <div style="display: flex; align-items: center;">
-  <img src="./ypog.webp" alt="YPOG company logo" />
+  <img loading="lazy" width="128" height="128" srcset="./wikimedia.webp 1x, ./wikimedia-256.webp 2x" src="./wikimedia.png" alt="Wikimedia logo" />
+
   <address>
-    <a href="https://www.openstreetmap.org/node/3678881038">
-      YPOG GmbH<br/>
-      Kurfürstendamm 12<br/>
-      10719 Berlin<br/>
+    <a href="https://www.openstreetmap.org/node/2551527703">
+      Wikimedia Deutschland e.V.<br/>
+      Tempelhofer Ufer 23-24<br/>
+      <br/>
+      10963 Berlin<br/>
     </a>
   </address>
 </div>
-<!--address>
-  <a href="https://www.openstreetmap.org/node/2551527703">
-    Wikimedia Deutschland e.V.<br/>
-    Tempelhofer Ufer 23-24<br/>
-    <br/>
-    10963 Berlin<br/>
-  </a>
-</address-->
 
 ## Event Page
 
