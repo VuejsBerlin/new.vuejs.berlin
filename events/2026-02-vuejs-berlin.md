@@ -10,13 +10,11 @@ Let's talk about Vue.js the Vue.js ecosystem!
 
 ## Presentation 📽️
 
-Slots are open!
-
 <details>
   <summary>
     Jakob and Helian from KNIME
     <span title="Talk">🎙</span>
-    <strong>From Java to Vue: Migrating a large Desktop App to the Web</strong>
+    <strong>From Desktop to Web: Rebuilding our Data Science Platform with Vue & Nuxt</strong>
   </summary>
   <p>In this talk, we'll share how we're using Vue and Nuxt to evolve a large Java-based desktop application, used by over 300k users in 60+ countries, into a modern web experience.</p>
 </details>
