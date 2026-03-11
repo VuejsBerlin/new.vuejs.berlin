@@ -4,7 +4,7 @@ date: 2026-04-14T19:00:00+01:00
 slug: 2026-04-14-vuejs-berlin
 hero: https://images.lumacdn.com/cdn-cgi/image/format=auto,quality=81,width=640/event-covers/8z/14de9b9e-9eeb-4b72-9332-c96e826cb7a2.png
 hero_alt: People sitting in a barely lit room with laptops, in front of a large window showing the Berlin skyline with the Vuejs Berlin logo.
-luma_url: https://luma.com/tp0hqos5
+luma_url: https://luma.com/413icmq6
 ---
 Let's talk about Vue.js, its ecosystem and your own projects!
 
