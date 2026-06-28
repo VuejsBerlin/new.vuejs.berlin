@@ -1,26 +1,35 @@
-import { ref } from 'vue'
 import { data as events } from './events.data'
 
-function happensBefore(date: Date, eventDate: Date) {
-  const t1 = eventDate.getTime()
-  const t2 = date.getTime()
+export type Event = typeof events[number] & { cancelled: boolean }
 
-  return t1 < t2
+function happensBefore(date: Date, eventDate: Date) {
+  return eventDate.getTime() < date.getTime()
+}
+
+function isCancelled(url: string) {
+  return url.includes('.cancelled')
 }
 
 export default function useEvents() {
-  type Event = typeof events[number]
-  events.sort((a, b) => {
-    return a.frontmatter.date.localeCompare(b.frontmatter.date)
-  })
+  const tagged = events.map(e => ({
+    ...e,
+    cancelled: isCancelled(e.url)
+  }))
+
+  tagged.sort((a, b) => a.frontmatter.date.localeCompare(b.frontmatter.date))
 
   let nextEvent: Event | undefined = undefined
   const pastEvents: Event[] = []
   const futureEvents: Event[] = []
+  const cancelledEvents: Event[] = []
 
   const today = new Date()
 
-  for (let event of events) {
+  for (const event of tagged) {
+    if (event.cancelled) {
+      cancelledEvents.push(event)
+      continue
+    }
     const eventDate = new Date(event.frontmatter.date)
     if (happensBefore(today, eventDate)) {
       pastEvents.push(event)
@@ -30,5 +39,5 @@ export default function useEvents() {
     }
   }
 
-  return { nextEvent, pastEvents, futureEvents }
+  return { nextEvent, pastEvents, futureEvents, cancelledEvents, isCancelled }
 }

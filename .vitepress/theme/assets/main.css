@@ -169,3 +169,29 @@ details[open] p {
   }
 }
 
+.cancelled-banner {
+  margin: 1em 0;
+  padding: 1em;
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.next-event .notice {
+  padding: 0.5em 1em;
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  margin: 0.5em 0;
+}
+
+.cancelled-badge {
+  background: #dc3545;
+  color: white;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+

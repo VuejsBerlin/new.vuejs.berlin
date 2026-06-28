@@ -22,6 +22,10 @@ const wallpaperCSSClass = computed(() => {
 })
 
 const withMenu = ref(false)
+
+const isCancelledPage = computed(() =>
+  page.value.relativePath.includes('.cancelled.')
+)
 </script>
 
 <template>
@@ -46,6 +50,9 @@ const withMenu = ref(false)
     <article class="content-container">
       <div class="hero" v-if="frontmatter.hero">
         <img :src="frontmatter.hero" :alt="frontmatter.hero_alt || `${frontmatter.title} hero image`" />
+      </div>
+      <div class="cancelled-banner" v-if="isCancelledPage">
+        ⚠️ {{ frontmatter.notice || 'This event has been cancelled.' }}
       </div>
       <Content />
     </article>
