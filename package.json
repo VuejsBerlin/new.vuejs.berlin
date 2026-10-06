@@ -4,7 +4,11 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "test": "node --test scripts/events.test.mjs scripts/event-naming.test.mjs && node --experimental-strip-types --test scripts/openmeet-loader.test.mts && node scripts/sync-events.e2e.mjs",
+    "event:new": "node scripts/new-event.mjs",
+    "event:sync": "node --env-file-if-exists=.env scripts/sync-events.mjs",
+    "test:event:sync": "node --env-file-if-exists=.env scripts/sync-events.mjs --dry-run"
   },
   "devDependencies": {
     "@vueuse/core": "^10.11.0",

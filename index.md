@@ -3,27 +3,12 @@ home: true
 ---
 <script setup lang="ts">
 import NextEvent from './NextEvent.vue'
+import OpenMeetCalendar from './OpenMeetCalendar.vue'
 </script>
 
 ## Upcoming Event
 
-<details>
-  <summary>
-    Show upcoming events from lu.ma event calendar
-  </summary>
-  <br />
-  <iframe
-    loading="lazy"
-    src="https://lu.ma/embed/calendar/cal-YB4E1NxlHNwOoYG/events?lt=light"
-    width="640"
-    height="440"
-    frameborder="0"
-    style="border: 1px solid #bfcbda88; border-radius: 4px;"
-    allowfullscreen=""
-    aria-hidden="false"
-    tabindex="0"
-  ></iframe>
-</details>
+<OpenMeetCalendar />
 
 <NextEvent />
 

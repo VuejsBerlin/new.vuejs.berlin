@@ -147,6 +147,50 @@ details[open] p {
   line-height: 1.5em;
 }
 
+/* The OpenMeet calendar is rendered at build time, so it uses the same layout
+   as Events.vue rather than any third-party widget styling. */
+details[open] ol.openmeet-calendar {
+  margin: 1em 0 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+details[open] ol.openmeet-calendar li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em 1em;
+  align-items: baseline;
+  padding: .4em 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+details[open] ol.openmeet-calendar li:last-child {
+  border-bottom: none;
+}
+
+.openmeet-calendar-date {
+  color: #666;
+  font-size: .9em;
+}
+
+.openmeet-calendar-attendees {
+  color: #666;
+  font-size: .9em;
+  margin-left: auto;
+}
+
+details[open] p.openmeet-calendar-empty {
+  text-align: left;
+}
+
+/* Escape hatch to the Luma calendar, which is still created by hand. */
+details[open] p.calendar-fallback {
+  margin: 1em 0 0;
+  padding: 0 1em;
+  text-align: left;
+  font-size: .9em;
+}
+
 .alert {
   margin: 2em 0;
   text-align: center;
