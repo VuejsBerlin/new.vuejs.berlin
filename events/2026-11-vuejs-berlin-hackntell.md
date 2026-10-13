@@ -1,5 +1,5 @@
 ---
-title: "Vue.js // Berlin #112 - Hack'n'Tell Edition"
+title: "Vue.js // Berlin #111 - Hack'n'Tell Edition"
 date: 2026-11-10T19:00:00+01:00
 slug: 2026-11-10-vuejs-berlin
 hero: /events/2026-11-vuejs-berlin-hackntell.png

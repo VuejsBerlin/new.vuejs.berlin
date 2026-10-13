@@ -1,5 +1,5 @@
 ---
-title: "Vue.js // Berlin #113"
+title: "Vue.js // Berlin #112"
 date: 2026-12-08T19:00:00+01:00
 slug: 2026-12-08-vuejs-berlin
 hero: /events/2026-12-vuejs-berlin.png

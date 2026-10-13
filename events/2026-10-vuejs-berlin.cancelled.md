@@ -9,7 +9,7 @@ openmeet_url: https://platform.openmeet.net/events/vuejs-berlin-111-schnaps-edit
 hero_sha256: fa6a6f0fc86ca1d43155e8db6ec3ea55360b49becc206ad8a2ad3a65e021c4ee
 ---
 
-⚠️ Room change! Same address, but the room will be in the third floor. Please pay close attention to the signs!
+⚠️ Due to sickness, Wikimedia cannot provide a room and had to cancel last minute.
 
 ---
 
