@@ -244,40 +244,25 @@ details[open] p.calendar-fallback {
 }
 
 /* RSVP links on event pages. One button per provider, so the block only shows
-   the platforms the event actually has a link for. */
+   the platforms the event actually has a link for. The buttons share the full
+   width of the block, and stack on narrow screens. */
 .rsvp {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: .75em;
   margin: 1em 0;
 }
 
-.rsvp-label {
-  font-weight: bold;
-}
-
-/* The buttons travel together: when the row doesn't fit, the whole group
-   moves to the next line instead of leaving one button behind. */
-.rsvp-links {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: .75em;
-}
-
-.rsvp .rsvp-links>a.rsvp-link {
-  display: inline-block;
+.rsvp>a.rsvp-link {
+  flex: 1 1 10em;
+  text-align: center;
   padding: .4em 1em;
   border: 2px solid #3aa676;
   border-radius: 4px;
 }
 
-.rsvp.cancelled .rsvp-links>a.rsvp-link {
+.rsvp.cancelled>a.rsvp-link {
   border-color: #999;
   color: #999;
-}
-
-.rsvp.cancelled .rsvp-label {
-  color: #666;
 }
 

@@ -42,11 +42,12 @@ Vuejs//Berlin community website — a **fully static VitePress site** (Vue 3) fo
 │
 ├── Events.vue                   # Past + future event lists via useEvents()
 ├── NextEvent.vue                # Featured next-event card via useEvents()
+├── RsvpLinks.vue                # RSVP buttons, one per provider (OpenMeet / Luma)
 ├── OpenMeetCalendar.vue         # Upcoming events list from openmeet.data
 ├── Newsletters.vue              # All newsletters from newsletters.data
 ├── useEvents.ts                 # Composable: sorts/partitions events from events.data
 ├── useSecondTuesday.ts          # Utility: computes next "second Tuesday" date
-├── events.data.mts              # VitePress content loader: events/*.md ({ excerpt: true })
+├── events.data.mts              # VitePress content loader: events/*.md (excerpt at `<!-- more -->`)
 ├── openmeet.data.mts            # VitePress data loader: upcoming events from OpenMeet API
 ├── newsletters.data.mts         # VitePress content loader: newsletters/*.md
 ├── events-archive.json          # ~366 KB snapshot dump from Meetup GraphQL API
@@ -97,11 +98,20 @@ hero_sha256: string    # Sha256 of the hero image last uploaded; written by `pnp
 notice: string         # Optional notice shown for cancelled or changed events
 ```
 
-`luma_url` and `openmeet_url` are the two RSVP links. `Layout.vue` renders one
-button per provider on event pages — whichever of the two is present — so an
-event can be OpenMeet-only, Luma-only, or both. Both are optional; an event
-with neither simply gets no RSVP block. Cancelled events keep the buttons but
-mark them as closed.
+`luma_url` and `openmeet_url` are the two RSVP links. `RsvpLinks.vue` renders one
+button per provider — whichever of the two is present — so an event can be
+OpenMeet-only, Luma-only, or both. Both are optional; an event with neither
+simply gets no RSVP block.
+
+For an event that is over (or cancelled) the buttons read "… Event Page"
+instead of "RSVP on …" and stay clickable; cancelled ones are greyed out. The
+comparison is against the **build time**, injected as `__BUILD_TIME__` by
+`.vitepress/config.mts` — the site is static, so this keeps the
+server-rendered HTML and the hydrated page identical.
+
+The component is used in two places: in the theme's `Layout.vue`, below the
+hero of every event page, and in `NextEvent.vue`, in the "Upcoming Event" card
+on the homepage and the events page.
 
 The `Event` type alias in `useEvents.ts` is derived from VitePress's content loader return type: `type Event = typeof events[number]`.
 
@@ -139,6 +149,7 @@ before the extension, which `useEvents.ts` keys off.
 | `Header.vue` | `title: string`, `withMenu?: boolean`, `hintMenu?: boolean` |
 | `SideBar.vue` | `width?: number` |
 | `Logo.vue` | `progress?: number` (0–100, drives stroke-dash animation) |
+| `RsvpLinks.vue` | `openmeetUrl?: string`, `lumaUrl?: string`, `date?: string`, `cancelled?: boolean` |
 
 ### Legacy domain model (Gridsome/Contentful, inactive)
 - **ContentfulEvent**: title, path, date, address, headerImage, details, talks (each with title, details, speakers)

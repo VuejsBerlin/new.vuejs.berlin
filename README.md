@@ -151,8 +151,9 @@ event page itself always shows the full text.
 ### RSVP links
 
 Every event page shows its RSVP links right under the cover image, so a single
-link to `vuejs.berlin/events/…` is enough to let people RSVP. The links come
-from the frontmatter, one button per provider:
+link to `vuejs.berlin/events/…` is enough to let people RSVP. The same buttons
+sit in the "Upcoming Event" card on the homepage and the events page. The
+links come from the frontmatter, one button per provider:
 
 | Frontmatter | Buttons shown |
 |-------------|---------------|
@@ -165,8 +166,14 @@ from the frontmatter, one button per provider:
 event is created by hand. Add the field and the second button appears on the
 next build; nothing else needs to change.
 
-Cancelled events keep their links (so a shared link still explains the state)
-but mark them as closed.
+Once an event is over, the buttons stop being a call to action: they read
+"OpenMeet Event Page" / "Luma Event Page" instead, but still lead to the
+provider's page for that event. Cancelled events do the same and are greyed
+out, so a shared link still explains the state.
+
+"Over" means "before the build": the site is static, so the comparison is made
+against the build time (see `__BUILD_TIME__` in `.vitepress/config.mts`), not
+against the visitor's clock. A rebuild is what flips an event's buttons.
 
 ### Cancelling an event
 

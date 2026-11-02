@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import useEvents from './useEvents'
 import secondTuesday from './useSecondTuesday'
+import RsvpLinks from './RsvpLinks.vue'
 
 const { nextEvent, cancelledEvents } = useEvents()
 
@@ -46,6 +47,10 @@ const confirmedNext = computed(() => {
     <div class="hero" v-if="confirmedNext.frontmatter.hero">
       <img :src="confirmedNext.frontmatter.hero" :alt="confirmedNext.frontmatter.hero_alt || `${confirmedNext.frontmatter.title} hero image`" />
     </div>
+    <RsvpLinks
+      :openmeet-url="confirmedNext.frontmatter.openmeet_url"
+      :luma-url="confirmedNext.frontmatter.luma_url"
+      :date="confirmedNext.frontmatter.date" />
     <div class="rendered-markdown" v-html="confirmedNext.excerpt" />
     <footer>
       <a :href="confirmedNext.url">Go to Event Page</a>

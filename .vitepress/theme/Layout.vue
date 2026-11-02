@@ -7,6 +7,7 @@ import Logo from './components/Logo.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import PageHeader from './components/Header.vue'
 import SideBar from './components/SideBar.vue'
+import RsvpLinks from '../../RsvpLinks.vue'
 
 import wallpaperPath from './assets/wallpaper.jpg'
 import useImageLoader from './useImageLoader'
@@ -33,18 +34,6 @@ const isCancelledPage = computed(() =>
 const isEventPage = computed(() =>
   page.value.relativePath.startsWith('events/')
 )
-
-const rsvpLinks = computed(() => {
-  if (!isEventPage.value) return []
-  const links = []
-  if (frontmatter.value.openmeet_url) {
-    links.push({ label: 'RSVP on OpenMeet', href: frontmatter.value.openmeet_url })
-  }
-  if (frontmatter.value.luma_url) {
-    links.push({ label: 'RSVP on Luma', href: frontmatter.value.luma_url })
-  }
-  return links
-})
 </script>
 
 <template>
@@ -73,15 +62,11 @@ const rsvpLinks = computed(() => {
       <div class="cancelled-banner" v-if="isCancelledPage">
         ⚠️ {{ frontmatter.notice || 'This event has been cancelled.' }}
       </div>
-      <div class="rsvp" :class="{ cancelled: isCancelledPage }" v-if="rsvpLinks.length">
-        <span class="rsvp-label">
-          {{ isCancelledPage ? 'Cancelled — RSVPs closed' : 'RSVP' }}
-        </span>
-        <span class="rsvp-links">
-          <a v-for="link in rsvpLinks" :key="link.href" class="rsvp-link"
-            :href="link.href" target="_blank" rel="noopener">{{ link.label }}</a>
-        </span>
-      </div>
+      <RsvpLinks v-if="isEventPage"
+        :openmeet-url="frontmatter.openmeet_url"
+        :luma-url="frontmatter.luma_url"
+        :date="frontmatter.date"
+        :cancelled="isCancelledPage" />
       <Content />
     </article>
   </div>
