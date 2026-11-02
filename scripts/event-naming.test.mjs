@@ -45,6 +45,15 @@ test('the body leads with the standard intro, then the edition section', () => {
   assert.ok(hackntell.indexOf("## Hack'n'Tell") < hackntell.indexOf('## Swag'))
 })
 
+test('the body marks the end of the excerpt', () => {
+  // `<!-- more -->` is what `events.data.mts` splits on, so it has to sit
+  // before the boilerplate sections.
+  for (const body of [eventBody(), eventBody('hackntell')]) {
+    assert.ok(body.includes('<!-- more -->'))
+    assert.ok(body.indexOf('<!-- more -->') < body.indexOf('## Swag'))
+  }
+})
+
 async function withImages(files, run) {
   const dir = await mkdtemp(join(tmpdir(), 'vuejs-images-'))
   for (const name of files) await writeFile(join(dir, name), 'x')

@@ -96,10 +96,28 @@ openmeet_url: string   # OpenMeet event link; written by `pnpm event:sync`
 hero_sha256: string    # Sha256 of the hero image last uploaded; written by `pnpm event:sync`
 notice: string         # Optional notice shown for cancelled or changed events
 ```
+
+`luma_url` and `openmeet_url` are the two RSVP links. `Layout.vue` renders one
+button per provider on event pages — whichever of the two is present — so an
+event can be OpenMeet-only, Luma-only, or both. Both are optional; an event
+with neither simply gets no RSVP block. Cancelled events keep the buttons but
+mark them as closed.
+
 The `Event` type alias in `useEvents.ts` is derived from VitePress's content loader return type: `type Event = typeof events[number]`.
 
-### Event file names and slugs
+### Event excerpts
 
+`events.data.mts` loads events with `excerpt: '<!-- more -->'`, so an event's
+excerpt is everything in the body before that marker. The excerpt is what
+`NextEvent.vue` renders in the "Upcoming Event" card; the event page itself
+always shows the full body.
+
+Note that `excerpt: true` would **not** work here: gray-matter's boolean form
+uses the frontmatter delimiter (`---`) as the separator, which no event body
+contains — the excerpt would always be empty. `<!-- more -->` is the marker
+`pnpm event:new` writes into new event files.
+
+### Event file names and slugs
 These two conventions differ on purpose, and conflating them is an easy mistake:
 
 | | Format | Example |
@@ -146,7 +164,7 @@ vitepress build
 1. **VitePress bootstraps** with custom theme from `.vitepress/theme/index.ts`
 2. **Layout.vue** reads `frontmatter` via `useData()` to decide rendering mode:
    - `frontmatter.home === true` → full-viewport hero with wallpaper, Logo, SiteFooter, Content below
-   - otherwise → standard layout with PageHeader, SideBar, hero image (if `frontmatter.hero`), Content
+   - otherwise → standard layout with PageHeader, SideBar, hero image (if `frontmatter.hero`), RSVP links (one button per provider in `frontmatter.openmeet_url` / `frontmatter.luma_url`), Content
 3. **Sidebar toggle**: local `ref(withMenu)` in Layout.vue, passed to Header/SideBar via props/events. CSS `transform: translate(260px)` slides content right.
 4. **Pages** (Events, Newsletters) import composables/data at module scope; VitePress resolves them at build time.
 

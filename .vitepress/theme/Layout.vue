@@ -26,6 +26,25 @@ const withMenu = ref(false)
 const isCancelledPage = computed(() =>
   page.value.relativePath.includes('.cancelled.')
 )
+
+// Event pages carry the RSVP links in their frontmatter. Each provider gets its
+// own button, but only if the event actually has that link: the newest events
+// are OpenMeet-only, older ones only know Luma, and a few have both.
+const isEventPage = computed(() =>
+  page.value.relativePath.startsWith('events/')
+)
+
+const rsvpLinks = computed(() => {
+  if (!isEventPage.value) return []
+  const links = []
+  if (frontmatter.value.openmeet_url) {
+    links.push({ label: 'RSVP on OpenMeet', href: frontmatter.value.openmeet_url })
+  }
+  if (frontmatter.value.luma_url) {
+    links.push({ label: 'RSVP on Luma', href: frontmatter.value.luma_url })
+  }
+  return links
+})
 </script>
 
 <template>
@@ -53,6 +72,15 @@ const isCancelledPage = computed(() =>
       </div>
       <div class="cancelled-banner" v-if="isCancelledPage">
         ⚠️ {{ frontmatter.notice || 'This event has been cancelled.' }}
+      </div>
+      <div class="rsvp" :class="{ cancelled: isCancelledPage }" v-if="rsvpLinks.length">
+        <span class="rsvp-label">
+          {{ isCancelledPage ? 'Cancelled — RSVPs closed' : 'RSVP' }}
+        </span>
+        <span class="rsvp-links">
+          <a v-for="link in rsvpLinks" :key="link.href" class="rsvp-link"
+            :href="link.href" target="_blank" rel="noopener">{{ link.label }}</a>
+        </span>
       </div>
       <Content />
     </article>

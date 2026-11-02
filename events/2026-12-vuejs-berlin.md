@@ -16,6 +16,8 @@ Let's talk about Vue.js, its ecosystem and your projects!
 
 Talk about your projects, ideas, problems. Find friends, convince enemies! Everything is possible!
 
+<!-- more -->
+
 ## Swag'n'Goodies 😎
 
 Grab water, cold drinks, tea or coffee! You can also bring alcoholic beverages and food to the meetup.

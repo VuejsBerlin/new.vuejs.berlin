@@ -121,10 +121,52 @@ The list reflects whatever OpenMeet served *during that build*, so rebuild after
 | `date` | Start time. Only the date and `19:00` are read; the UTC offset is ignored and Europe/Berlin is assumed (several older files carry a stale offset). |
 | `slug` | Legacy. Carries the day, unlike the file name. Not used for URLs — VitePress derives the path from the file name. Kept for consistency with existing files. |
 | `hero`, `hero_alt` | Cover image. Use a root-relative `/events/...` path for images we host; absolute URLs are display-only. |
-| `luma_url` | Link to the hand-made Luma event. |
+| `luma_url` | Optional link to the hand-made Luma event. |
 | `openmeet_url` | Written automatically by `pnpm event:sync`. Maps the file to its OpenMeet event. |
 | `hero_sha256` | Written automatically by `pnpm event:sync`. Sha256 of the hero image last uploaded. |
 | `notice` | Optional line shown for cancelled or changed events. |
+
+### Excerpts
+
+The "Upcoming Event" card on the homepage and the events page shows an event's
+**excerpt** — everything in the markdown before a `<!-- more -->` marker:
+
+```markdown
+Let's talk about Vue.js, its ecosystem and your projects!
+
+## Presentation 📽️
+
+**Slots are open!**
+
+<!-- more -->
+
+## Swag'n'Goodies 😎
+```
+
+`events.data.mts` splits on that marker, so anything after it (the swag, the
+code of conduct, the host) stays out of the card. `pnpm event:new` puts the
+marker in place for you. Without a marker an event simply has no excerpt — the
+event page itself always shows the full text.
+
+### RSVP links
+
+Every event page shows its RSVP links right under the cover image, so a single
+link to `vuejs.berlin/events/…` is enough to let people RSVP. The links come
+from the frontmatter, one button per provider:
+
+| Frontmatter | Buttons shown |
+|-------------|---------------|
+| `openmeet_url` only | "RSVP on OpenMeet" |
+| `luma_url` only | "RSVP on Luma" |
+| both | both buttons, side by side |
+| neither | no RSVP block |
+
+`luma_url` is optional — the newest events are OpenMeet-only until their Luma
+event is created by hand. Add the field and the second button appears on the
+next build; nothing else needs to change.
+
+Cancelled events keep their links (so a shared link still explains the state)
+but mark them as closed.
 
 ### Cancelling an event
 

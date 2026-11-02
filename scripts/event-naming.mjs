@@ -82,6 +82,8 @@ export function eventBody(edition) {
   const intro = edition ? EDITIONS[edition]?.intro : undefined
   return `Let's talk about Vue.js, its ecosystem and your own projects!
 ${intro ? `\n${intro}\n` : ''}
+<!-- more -->
+
 ## Swag'n'Goodies 😎
 
 Grab water, cold drinks, tea or coffee! You can also bring alkoholic beverages and food to the meetup.

@@ -48,7 +48,7 @@ const confirmedNext = computed(() => {
     </div>
     <div class="rendered-markdown" v-html="confirmedNext.excerpt" />
     <footer>
-      <a :href="confirmedNext.frontmatter.luma_url || confirmedNext.url">Go to Event Page</a>
+      <a :href="confirmedNext.url">Go to Event Page</a>
     </footer>
   </div>
 
